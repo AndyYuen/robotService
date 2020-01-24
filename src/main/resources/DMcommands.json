@@ -1,0 +1,20 @@
+{
+  "lookup" : "statelessSession",
+  "commands" : [
+    {"set-global":
+  {"identifier":"service","object":
+  {"com.redhat.demo.blacklistclient.Client":{}}}},
+    {
+    "insert" : {
+      "out-identifier" : "person",
+      "return-object" : "true",
+      "object" : {"com.myspace.datavalidation.Person": {
+        "name": "%s"
+      }
+
+    }}}, {
+      "fire-all-rules" : ""
+  },
+  {"query":{"out-identifier":"error","name":"get_validation_error"} 
+  }]
+}
